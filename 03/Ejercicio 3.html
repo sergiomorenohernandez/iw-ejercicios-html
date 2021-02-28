@@ -7,15 +7,36 @@
     <div> Rellene este formulario para pedir reserva en la sociedad</div>
     <form action="server.php" method="post">
         <fieldset>
-            <legend>Datos del usuario: </legend>
+            <legend> Datos del usuario: </legend>
             <label for="nombre"> Nombre </label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" name="nombre"> <br/><br/>
             <label for="socio"> ¿Eres socio? </label>
-                <input type="radio"> 
-
+                <input type="radio" id="socio" name="socio" value="si"> Sí
+                <input type="radio" id="socio" name="socio" value="no"> No <br/><br/>
+            <label for="email"> Email </label>
+                <input type="email" id="email" name="email"> <br/><br/>
+            <label for="contraseña"> Contraseña </label>
+                <input type="password" id="contraseña" name="contraseña"> <br/><br/>
         </fieldset>
+        <fieldset>
+            <legend> Datos de la reserva: </legend>
+            <label for="edad"> Edad </label>
+                <select id="edad" name="edad"> 
+                    <option> menor de 18</option>
+                    <option selected> entre 18 y 65</option>
+                    <option> mayor de 65 </option>
+                </select> <br/><br/>
+            <label for="fecha"> Seleccione la fecha de la reserva </label>
+                <input type="date" id="fecha"> <br/><br/>
+            <label for="hora"> Seleccione la hora de la reserva </label>
+                <input type="time" id="hora"> <br/><br/>
+            <textarea name="comentarios" rows="10" cols="50"> Comentarios </textarea>
+        </fieldset>
+        <input type="checkbox" id="condiciones" name="condiciones" value="condiciones">
+        
+        <label for="condiciones"> Acepto las condiciones </label> <br/><br/>
 
-
+        <input type="submit" value="Enviar">
     </form>
 
 </body>
